@@ -1,0 +1,49 @@
+import React from 'react';
+import testimonialBg from '../assets/images/testimonial-bg.png';
+
+const PageBackdrop = () => {
+  return (
+    <div
+      aria-hidden="true"
+      className="fixed inset-0 pointer-events-none select-none overflow-hidden z-0"
+    >
+      
+      <div
+        className="absolute inset-x-0 top-0 h-[620px] opacity-[0.14]"
+        style={{
+          backgroundImage: 'radial-gradient(rgba(208, 218, 245, 0.8) 1px, transparent 1px)',
+          backgroundSize: '28px 28px',
+          maskImage: 'radial-gradient(ellipse 60% 55% at 50% 25%, #000 20%, transparent 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 60% 55% at 50% 25%, #000 20%, transparent 100%)',
+        }}
+      />
+
+      
+      <div
+        className="absolute top-[88px] left-1/2 -translate-x-1/2 w-[750px] h-[1px]"
+        style={{
+          background:
+            'linear-gradient(90deg, transparent 0%, rgba(127, 86, 217, 0.45) 50%, transparent 100%)',
+          boxShadow: '0 0 80px 8px rgba(127, 86, 217, 0.25)',
+        }}
+      />
+
+      
+      <div
+        className="absolute top-[42%] left-1/2 -translate-x-1/2 w-[135vw] min-w-[1100px] max-w-[1650px] opacity-[0.32]"
+        style={{
+          maskImage: 'radial-gradient(ellipse 65% 50% at 50% 50%, #000 15%, transparent 85%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 65% 50% at 50% 50%, #000 15%, transparent 85%)',
+        }}
+      >
+        <img
+          src={testimonialBg}
+          alt=""
+          className="w-full h-auto object-cover scale-x-[-1]"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default PageBackdrop;
